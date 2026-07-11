@@ -29,7 +29,7 @@ select
     , STRFTIME('%H', datetime(offline_timestamp, 'unixepoch', '{utc_timezone}')) AS offline_time_h
     , incognito_mode
 from 
-    {raw_extended_stream_table}
+    raw_extended_stream_table
 where ms_played <> 0
 
 ;

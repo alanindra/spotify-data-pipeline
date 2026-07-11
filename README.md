@@ -35,3 +35,6 @@ Once processed, the data will be moved to processed dir
 
 - logs
     - must contain table name, update time (upstream for metadata)
+
+### TODO
+fix churn logic (current table shows listening activity. meaning, there should not any instance of churn. prolly need crossjoin.)

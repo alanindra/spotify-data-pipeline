@@ -1,7 +1,9 @@
 table_name: extended_stream_table
+schema: master
 cols:
   timestamp:
     type: TIMESTAMP
+    format: YYYY-MM-DD H:M:S
   date:
     type: DATE
     format: YYYY-MM-DD
@@ -55,6 +57,7 @@ cols:
     type: BOOLEAN
   offline_timestamp:
     type: TIMESTAMP
+    format: YYYY-MM-DD H:M:S
   offline_time_hm:
     type: TIME
     format: HH:MM
