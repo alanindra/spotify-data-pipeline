@@ -13,8 +13,8 @@ test.ipynb
 tools/__pycache__
 
 /input/
-logs
-output
+/logs/
+/output/
 
 input_test
 processed
