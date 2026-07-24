@@ -12,7 +12,7 @@ spotify_account_data/streaming_extended/ReadMeFirst_ExtendedStreamingHistory.pdf
 test.ipynb
 tools/__pycache__
 
-input
+/input/
 logs
 output
 
