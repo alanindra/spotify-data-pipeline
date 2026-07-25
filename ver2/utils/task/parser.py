@@ -18,19 +18,21 @@ def parse_schema_and_table() -> dict :
         key=lambda p: p.name
     )
     
-    schemas_and_tables = {}
+    schemas_and_tables = {
+        "schemas_and_table": {}
+    }
 
     if not schemas:
         raise RuntimeError("No schema found. Please add a schema to run the DAG.")
 
     for schema in schemas:       
         # print(f"Schema: {schema.name}")
-        schemas_and_tables[schema.name] = []
+        schemas_and_tables["schemas_and_table"][schema.name] = []
         tables = sorted(
             (t for t in schema.iterdir() if t.is_dir()),
             key=lambda p: p.name
         )
-        
+
         if not tables:
             raise RuntimeError(f"No table found under schema '{schema.name}'. Please add table before running DAG")
         
@@ -51,7 +53,7 @@ def parse_schema_and_table() -> dict :
                     f"Found {len(yaml_files)}."
                 )   
 
-            schemas_and_tables[schema.name].append(table.name)
+            schemas_and_tables["schemas_and_table"][schema.name].append(table.name)
 
     return schemas_and_tables
 
